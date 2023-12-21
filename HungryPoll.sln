@@ -3,7 +3,18 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HungryPoll.API", "src\HungryPoll.API\HungryPoll.API.csproj", "{9FF413E3-3439-4959-B954-65BBCFDE4B31}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HungryPoll.API", "src\HungryPoll.API\HungryPoll.API.csproj", "{9FF413E3-3439-4959-B954-65BBCFDE4B31}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{DB9249A5-74D0-4C21-B703-9790A5310C6E}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HungryPoll.Domain", "src\HungryPoll.Domain\HungryPoll.Domain.csproj", "{0E77A52D-1EC1-472F-97E7-BA977A72DF25}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HungryPoll.Infrastructure", "src\HungryPoll.Infrastructure\HungryPoll.Infrastructure.csproj", "{DCA3F08A-3F57-41E2-95CA-B7F9DD96F0BE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HungryPoll.Handler", "src\HungryPoll.Handler\HungryPoll.Handler.csproj", "{4F67341B-4AA4-4540-9638-90ACCB7E0376}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +26,18 @@ Global
 		{9FF413E3-3439-4959-B954-65BBCFDE4B31}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9FF413E3-3439-4959-B954-65BBCFDE4B31}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9FF413E3-3439-4959-B954-65BBCFDE4B31}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E77A52D-1EC1-472F-97E7-BA977A72DF25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E77A52D-1EC1-472F-97E7-BA977A72DF25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E77A52D-1EC1-472F-97E7-BA977A72DF25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E77A52D-1EC1-472F-97E7-BA977A72DF25}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DCA3F08A-3F57-41E2-95CA-B7F9DD96F0BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCA3F08A-3F57-41E2-95CA-B7F9DD96F0BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCA3F08A-3F57-41E2-95CA-B7F9DD96F0BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCA3F08A-3F57-41E2-95CA-B7F9DD96F0BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F67341B-4AA4-4540-9638-90ACCB7E0376}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F67341B-4AA4-4540-9638-90ACCB7E0376}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F67341B-4AA4-4540-9638-90ACCB7E0376}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F67341B-4AA4-4540-9638-90ACCB7E0376}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
