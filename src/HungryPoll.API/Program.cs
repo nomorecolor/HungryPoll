@@ -1,6 +1,6 @@
-using HungryPoll.Domain.Models;
-using HungryPoll.Infrastructure.Settings;
-using Microsoft.EntityFrameworkCore;
+using HungryPoll.Domain;
+using HungryPoll.Handler;
+using HungryPoll.Infrastructure;
 using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -16,11 +16,10 @@ builder.Services.AddControllers()
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-var settings = new HungryPollSettings(builder.Configuration);
-builder.Services.AddSingleton<IHungryPollSettings>(settings);
-
-builder.Services.AddDbContext<HungryPollContext>(options =>
-	options.UseSqlServer(settings.ConnectionString));
+builder.Services
+	.AddDomain()
+	.AddHandler()
+	.AddInfrastructure();
 
 var app = builder.Build();
 
@@ -36,5 +35,9 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.UseCors(x => x.WithOrigins("http://localhost:4200")
+	.AllowAnyHeader()
+	.AllowAnyMethod());
 
 app.Run();
