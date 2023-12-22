@@ -1,3 +1,4 @@
+using HungryPoll.API.Converters;
 using HungryPoll.Domain;
 using HungryPoll.Handler;
 using HungryPoll.Infrastructure;
@@ -10,6 +11,7 @@ builder.Services.AddControllers()
 	.AddJsonOptions(options =>
 	{
 		options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
+		options.JsonSerializerOptions.Converters.Add(new GuidJsonConverter());
 	});
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
